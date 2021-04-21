@@ -15,24 +15,20 @@ const AppRoutes: React.FC = () => (
       cardStyle: {
         backgroundColor: colors.white
       }
-    }}
-  >
+    }}>
     <stackRoutes.Screen
       name="Welcome"
-      component={Welcome}
-    />
+      component={Welcome}/>
 
     <stackRoutes.Screen
       name="UserIdentification"
-      component={UserIdentification}
-    />
+      component={UserIdentification}/>
 
     <stackRoutes.Screen
       name="Confirmation"
-      component={Confirmation}
-    />
+      component={Confirmation}/>
 
   </stackRoutes.Navigator>
-)
+);
 
 export default AppRoutes;
