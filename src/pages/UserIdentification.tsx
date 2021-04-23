@@ -21,7 +21,9 @@ export function UserIdentification() {
   const navigation = useNavigation();
 
   function handleSubmit() {
-    navigation.navigate('Confirmation')
+    if (isFilled) {
+      navigation.navigate('Confirmation')
+    }
   }
 
   function handleInputBlur() {
