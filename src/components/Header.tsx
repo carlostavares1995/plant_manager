@@ -6,7 +6,7 @@ import {
   StyleSheet
 } from "react-native";
 import colors from "../styles/colors";
-import userImg from "../assets/watering.png";
+import userImg from "../assets/foto.png";
 import fonts from "../styles/fonts";
 import {getStatusBarHeight} from "react-native-iphone-x-helper";
 
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 20,
     marginTop: getStatusBarHeight(),
   },
   greeting: {
