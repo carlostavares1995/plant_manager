@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e71fc58d-cfb6-47dd-a4b9-86292783f33f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/server.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Load.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PlantCardPrimary.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/foto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EnviromentButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EnvironmentButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,12 +78,17 @@
       <workItem from="1593572425281" duration="1097000" />
       <workItem from="1593572421875" duration="8000" />
       <workItem from="1593572444047" duration="4407000" />
-      <workItem from="1593572426688" duration="4558000" />
+      <workItem from="1593572426688" duration="13444000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/react-native-svg/src/index.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="2455" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593576930218">
