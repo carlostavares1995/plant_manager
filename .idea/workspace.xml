@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e71fc58d-cfb6-47dd-a4b9-86292783f33f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Load.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlantCardPrimary.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EnviromentButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EnvironmentButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +72,8 @@
       <workItem from="1593572425281" duration="1097000" />
       <workItem from="1593572421875" duration="8000" />
       <workItem from="1593572444047" duration="4407000" />
-      <workItem from="1593572426688" duration="13444000" />
+      <workItem from="1593572426688" duration="14768000" />
+      <workItem from="1593572430781" duration="2173000" />
     </task>
     <servers />
   </component>
@@ -99,10 +94,10 @@
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="2469" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1593572427016" />
-    <state x="2385" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1593572568094">
+    <state x="2385" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1593572578359">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
-    <state x="2385" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1593572568094" />
+    <state x="2385" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1593572578359" />
     <state x="2383" y="144" width="609" height="536" key="find.popup" timestamp="1593575863985">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
