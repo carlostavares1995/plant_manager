@@ -6,13 +6,15 @@ import {
   StyleSheet,
   Text, TextInput,
   View,
+  Alert,
   Platform,
   Keyboard
 } from "react-native";
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 import {Button} from "../components/Button";
-import {useNavigation} from "@react-navigation/core"
+import {useNavigation} from "@react-navigation/core";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export function UserIdentification() {
   const [isFocused, setIsFocused] = useState(false);
@@ -20,10 +22,11 @@ export function UserIdentification() {
   const [name, setName] = useState<string>();
   const navigation = useNavigation();
 
-  function handleSubmit() {
-    if (isFilled) {
-      navigation.navigate('Confirmation')
-    }
+  async function handleSubmit() {
+    if (!name) return Alert.alert('Me diz como chamar você 😢');
+
+    await AsyncStorage.setItem('@plantmanager:user', name);
+    navigation.navigate('Confirmation')
   }
 
   function handleInputBlur() {

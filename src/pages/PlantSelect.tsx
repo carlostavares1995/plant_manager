@@ -42,7 +42,6 @@ export function PlantSelect() {
 
   const [page, setPage] = useState(1);
   const [loadingMore, setLoadingMore] = useState(false);
-  const [loadedAll, setLoadedAll] = useState(false);
 
   function handleEnvironmentSelected(environmentKey: string) {
     setEnvironmentSelected(environmentKey);
@@ -59,11 +58,9 @@ export function PlantSelect() {
   }
 
   function handleFetchMore(distance: number) {
-    if (distance < 1) {
-      return ;
-    }
+    if (distance < 1) return ;
 
-    setLoadedAll(true);
+    setLoadingMore(true);
     setPage(oldValue => oldValue + 1);
     fetchPlants();
   }
@@ -118,6 +115,7 @@ export function PlantSelect() {
       <View>
         <FlatList
           data={environments}
+          keyExtractor={(item => String(item.key))}
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.environmentList}
@@ -133,6 +131,7 @@ export function PlantSelect() {
       <View style={styles.plants}>
         <FlatList
           data={filteredPlants}
+          keyExtractor={(item => String(item.id))}
           showsVerticalScrollIndicator={false}
           numColumns={2}
           onEndReachedThreshold={0.1}
