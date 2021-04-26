@@ -14,6 +14,7 @@ import {Header} from "../components/Header";
 import {EnvironmentButton} from "../components/EnvironmentButton";
 import {PlantCardPrimary} from "../components/PlantCardPrimary";
 import {Load} from "../components/Load";
+import {useNavigation} from "@react-navigation/core";
 
 interface EnvironmentProps {
   key: string;
@@ -39,9 +40,10 @@ export function PlantSelect() {
   const [filteredPlants, setFilteredPlants] = useState<PlantProps[]>([]);
   const [environmentSelected, setEnvironmentSelected] = useState('all');
   const [loading, setLoading] = useState(true);
-
   const [page, setPage] = useState(1);
   const [loadingMore, setLoadingMore] = useState(false);
+
+  const navigation = useNavigation();
 
   function handleEnvironmentSelected(environmentKey: string) {
     setEnvironmentSelected(environmentKey);
@@ -57,8 +59,12 @@ export function PlantSelect() {
     setFilteredPlants(filtered);
   }
 
+  function handlePlantSelected(plant: PlantProps) {
+    navigation.navigate('PlantSave', {plant});
+  }
+
   function handleFetchMore(distance: number) {
-    if (distance < 1) return ;
+    if (distance < 1) return;
 
     setLoadingMore(true);
     setPage(oldValue => oldValue + 1);
@@ -135,15 +141,16 @@ export function PlantSelect() {
           showsVerticalScrollIndicator={false}
           numColumns={2}
           onEndReachedThreshold={0.1}
-          onEndReached={({ distanceFromEnd }) => handleFetchMore(distanceFromEnd)}
+          onEndReached={({distanceFromEnd}) => handleFetchMore(distanceFromEnd)}
           ListFooterComponent={
             loadingMore
-              ? <ActivityIndicator color={colors.green} />
+              ? <ActivityIndicator color={colors.green}/>
               : <></>
           }
           renderItem={({item}) => (
             <PlantCardPrimary
               data={item}
+              onPress={() => handlePlantSelected(item)}
             />
           )}
         />
