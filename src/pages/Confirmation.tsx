@@ -8,30 +8,51 @@ import {
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 import {Button} from "../components/Button";
-import {useNavigation} from "@react-navigation/core";
+import {useNavigation, useRoute} from "@react-navigation/core";
+
+interface Params {
+  title: string;
+  subTitle: string;
+  buttonTitle: string;
+  icon: 'smile' | 'hug';
+  nextScreen: string;
+}
+
+const emojis = {
+  hug: '🤗',
+  smile: '😁'
+};
 
 export function Confirmation() {
   const navigation = useNavigation();
+  const routes = useRoute();
+
+  const {
+    title,
+    subTitle,
+    buttonTitle,
+    icon,
+    nextScreen,
+  } = routes.params as Params;
 
   function handleConfirm() {
-    navigation.navigate('PlantSelect')
+    navigation.navigate(nextScreen)
   }
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.emoji}>
-          😁
+          {emojis[icon]}
         </Text>
         <Text style={styles.title}>
-          Prontinho
+          {title}
         </Text>
         <Text style={styles.subtitle}>
-          Agora vamos começar a cuidar das suas {"\n"}
-          plantinhas com muito cuidado.
+          {subTitle}
         </Text>
         <View style={styles.footer}>
-          <Button title="Começar" onPress={handleConfirm}/>
+          <Button title={buttonTitle} onPress={handleConfirm}/>
         </View>
       </View>
     </SafeAreaView>
