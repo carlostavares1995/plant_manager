@@ -16,7 +16,7 @@ interface PlantCardPrimaryProps extends RectButtonProps {
 export function PlantCardSecondary({data, ...rest}: PlantCardPrimaryProps) {
   return (
     <RectButton style={styles.container} {...rest}>
-      <SvgFromUri uri={data.photo} width={20} height={20} />
+      <SvgFromUri uri={data.photo} width={50} height={50} />
       <Text style={[styles.title]}>{data.name}</Text>
       <View style={styles.details}>
         <Text style={styles.timeLabel}>

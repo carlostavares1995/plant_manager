@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     paddingHorizontal: 20,
     paddingTop: 20,
-    paddingBottom: getBottomSpace() ?? 20,
+    paddingBottom: 20,
   },
   plantName: {
     fontFamily: fonts.heading,

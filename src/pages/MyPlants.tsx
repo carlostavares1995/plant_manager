@@ -3,7 +3,8 @@ import {
   StyleSheet,
   View,
   Image,
-  Text, FlatList,
+  Text,
+  FlatList,
 } from "react-native";
 import {Header} from "../components/Header";
 import colors from "../styles/colors";
@@ -39,8 +40,6 @@ export function MyPlants() {
 
     loadStorageData();
   }, []);
-
-
 
   return (
     <View style={styles.container}>
